@@ -14,4 +14,9 @@ describe("Fiter objects", () => {
 
     expect(actual).toEqual(expected);
   });
+
+  test("Should throw an error if an item does not have the `age` param", () => {
+    const input = [{}];
+    expect(() => FilterByAge(input)).toThrow(`No "age" param in item 0`);
+  });
 });
